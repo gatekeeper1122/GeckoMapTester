@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace GeckoMapTester
@@ -174,8 +174,15 @@ for x in range(int(len(string) / 4)):
 
         private void PokeButton_Click(object sender, EventArgs e)
         {
-            PokeAllMaps(((NameWrapper)NameCBox.SelectedItem).dataName);
-            MessageBox.Show("Success!", "GeckoTool", MessageBoxButtons.OK);
+            try
+            {
+                PokeAllMaps(((NameWrapper)NameCBox.SelectedItem).dataName);
+            }
+            catch(NullReferenceException)
+            {
+                PokeAllMaps(NameCBox.Text);
+            }
+            MessageBox.Show("Success!", "GeckoTool", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         /* gah
