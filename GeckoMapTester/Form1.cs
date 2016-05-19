@@ -3,21 +3,6 @@ using System.Windows.Forms;
 
 namespace GeckoMapTester
 {
-    public class NameWrapper
-    {
-        public string ingameName;
-        public string dataName;
-        public NameWrapper(string iname, string dname)
-        {
-            ingameName = iname;
-            dataName = dname;
-        }
-
-        public override string ToString()
-        {
-            return ingameName;
-        }
-    }
     public partial class Form1 : Form
     {
 
@@ -91,9 +76,11 @@ namespace GeckoMapTester
         private void button1_Click(object sender, EventArgs e)
         {
             Gecko = new TCPGecko(IPBox.Text, 7331);
-            try {
+            try
+            {
                 Gecko.Connect();
-            }catch(ETCPGeckoException exc)
+            }
+            catch (ETCPGeckoException exc)
             {
                 MessageBox.Show("Connection to the TCPGecko failed: \n\n" + exc.Message, "Connection failed", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 return;
