@@ -192,7 +192,6 @@
             this.label2.Size = new System.Drawing.Size(345, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Only for Splatoon 2.7.0, thanks to NWPlayer and CFLean for helpful stuff";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
@@ -208,7 +207,6 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "GeckoTool";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -6,32 +6,11 @@ namespace GeckoMapTester
     public partial class Form1 : Form
     {
 
-
-
         public TCPGecko Gecko;
-        string MapAscii;
-        uint address;
-        string extrasite;
 
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            String[] arguments = Environment.GetCommandLineArgs();
-            try
-            {
-                extrasite = arguments[1];
-                MessageBox.Show("Using custom python library dir: \n\n" + extrasite, "", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-
-            }
-            catch (Exception exc)
-            {
-                extrasite = @"C:\Python27\Lib";
-            }
-           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +20,7 @@ namespace GeckoMapTester
                 Gecko.Connect();
             }catch(ETCPGeckoException exc)
             {
-                MessageBox.Show("Connection to the TCPGecko failed: \n\n" + exc.Message, "Connection failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Connection to the TCPGecko failed: \n\n" + exc.Message, "Connection failed", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 return;
             }
             groupBox2.Enabled = true;
@@ -100,35 +79,35 @@ for x in range(int(len(string) / 4)):
 
         private void PokeAllMaps(string NewMapName)
         {
-            writeStringSimple(0x12AEE594, NewMapName);
-            writeStringSimple(0x12AEE51C, NewMapName);
-            writeStringSimple(0x12AEE4A4, NewMapName);
-            writeStringSimple(0x12AEE42C, NewMapName);
-            writeStringSimple(0x12AEE3B4, NewMapName);
-            writeStringSimple(0x12AEE33C, NewMapName);
-            writeStringSimple(0x12AEE2C4, NewMapName);
-            writeStringSimple(0x12AEE24C, NewMapName);
-            writeStringSimple(0x12AEE1D4, NewMapName);
-            writeStringSimple(0x12AEE15C, NewMapName);
-            writeStringSimple(0x12AEE0E4, NewMapName);
-            writeStringSimple(0x12AEE06C, NewMapName);
-            writeStringSimple(0x12AEDFF4, NewMapName);
-            writeStringSimple(0x12AEDF7C, NewMapName);
-            writeStringSimple(0x12AEDF04, NewMapName);
-            writeStringSimple(0x12AEDE8C, NewMapName);
+            writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE4A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE42C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE3B4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE33C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE2C4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE24C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE15C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE0E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEE06C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEDFF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEDF7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEDF04, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12AEDE8C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
 
-            writeStringSimple(0x12B4BA3C, NewMapName);
-            writeStringSimple(0x12B4BCC4, NewMapName);
-            writeStringSimple(0x12B4BF98, NewMapName);
-            writeStringSimple(0x12B4C1D4, NewMapName);
-            writeStringSimple(0x12B4C45C, NewMapName);
-            writeStringSimple(0x12B4C6E4, NewMapName);
-            writeStringSimple(0x12B4C96C, NewMapName);
-            writeStringSimple(0x12B4CBF4, NewMapName);
-            writeStringSimple(0x12B4CE7C, NewMapName);
-            writeStringSimple(0x12B4D104, NewMapName);
-            writeStringSimple(0x12B4D38C, NewMapName);
-            writeStringSimple(0x12B4D614, NewMapName);
+            writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4C1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4C45C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4C6E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4C96C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4CBF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4CE7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
         }
 
         private void PokeButton_Click(object sender, EventArgs e)
@@ -292,11 +271,6 @@ for x in range(int(len(string) / 4)):
                 }
                 Gecko.poke(offset, 0);
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
