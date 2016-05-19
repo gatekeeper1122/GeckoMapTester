@@ -3,6 +3,21 @@ using System.Windows.Forms;
 
 namespace GeckoMapTester
 {
+    public class NameWrapper
+    {
+        public string ingameName;
+        public string dataName;
+        public NameWrapper(string iname, string dname)
+        {
+            ingameName = iname;
+            dataName = dname;
+        }
+
+        public override string ToString()
+        {
+            return ingameName;
+        }
+    }
     public partial class Form1 : Form
     {
 
@@ -11,6 +26,66 @@ namespace GeckoMapTester
         public Form1()
         {
             InitializeComponent();
+            NameWrapper[] maps = {
+                new NameWrapper("Urchin Underpass","Fld_Crank00_Vss"),
+                new NameWrapper("Walleye Warehous","Fld_Warehouse00_Vss"),
+                new NameWrapper("Saltspray Rig","Fld_SeaPlant00_Vss"),
+                new NameWrapper("Arowana Mall","Fld_UpDown00_Vss"),
+                new NameWrapper("Blackbelly Skatepark","Fld_SkatePark00_Vss"),
+                new NameWrapper("Camp Triggerfish","Fld_Athletic00_Vss"),
+                new NameWrapper("Port Mackerel","Fld_Amida00_Vss"),
+                new NameWrapper("Kelp Dome","Fld_Maze00_Vss"),
+                new NameWrapper("Moray Towers","Fld_Tuzura00_Vss"),
+                new NameWrapper("Bluefin Depot","Fld_Ruins00_Vss"),
+                new NameWrapper("Trainingsroom","Fld_ShootingRange_Shr"),
+                new NameWrapper("Ancho-V Games","Fld_Office00_Vss"),
+                new NameWrapper("Piranha Pit","Fld_Quarry00_Vss"),
+                new NameWrapper("Flounder Heights","Fld_Jyoheki00_Vss"),
+                new NameWrapper("Museum d'Alfonsino","Fld_Pivot00_Vss"),
+                new NameWrapper("Mahi-Mahi Resort","Fld_Hiagari00_Vss"),
+                new NameWrapper("Hammerhead Bridge","Fld_Kaisou00_Vss"),
+                new NameWrapper("Urchin Underpass (Dojo)","Fld_Crank00_Dul"),
+                new NameWrapper("Walleye Warehouse (Dojo)","Fld_Warehouse00_Dul"),
+                new NameWrapper("Saltspray Rig (Dojo)","Fld_SeaPlant00_Dul"),
+                new NameWrapper("Arowana Mall (Dojo)","Fld_UpDown00_Dul"),
+                new NameWrapper("Blackbelly Skatepark (Dojo)","Fld_SkatePark00_Dul"),
+                new NameWrapper("Tutorial 1","Fld_Tutorial00_Ttr"),
+                new NameWrapper("Tutorial 2","Fld_TutorialShow00_Ttr"),
+                new NameWrapper("Octotrooper Hideout","Fld_EasyHide00_Msn"),
+                new NameWrapper("Lair of the Octoballs","Fld_EasyClimb00_Msn"),
+                new NameWrapper("Rise of the Octocopters","Fld_EasyJump00_Msn"),
+                new NameWrapper("Gusher Gauntlet","Fld_Geyser00_Msn"),
+                new NameWrapper("Floating Sponge Garden","Fld_Sponge00_Msn"),
+                new NameWrapper("Propeller Lift Fortress","Fld_Propeller00_Msn"),
+                new NameWrapper("Spreader Splatfest","Fld_PaintingLift00_Msn"),
+                new NameWrapper("Octoling Invasion","Fld_RvlMaze00_Msn"),
+                new NameWrapper("Unidentified Flying Object","Fld_OctZero00_Msn"),
+                new NameWrapper("Inkrail Skyscape","Fld_InkRail00_Msn"),
+                new NameWrapper("Inkvisible Avenues","Fld_Invisible00_Msn"),
+                new NameWrapper("Flooder Junkyard","Fld_Dozer00_Msn"),
+                new NameWrapper("Shifting Splatforms","Fld_SlideLift00_Msn"),
+                new NameWrapper("Octoling Assault","Fld_RvlSkatePark00_Msn"),
+                new NameWrapper("Undeniable Flying Object","Fld_OctRuins00_Msn"),
+                new NameWrapper("Propeller Lift Playground","Fld_Propeller01_Msn"),
+                new NameWrapper("Octosniper Ramparts","Fld_Charge00_Msn"),
+                new NameWrapper("Spinning Spreaders","Fld_PaintingLift01_Msn"),
+                new NameWrapper("Tumbling Splatforms","Fld_TurnLift00_Msn"),
+                new NameWrapper("Octoling Uprising","Fld_RvlRuins00_Msn"),
+                new NameWrapper("Unwelcome Flying Object","Fld_OctCrank00_Msn"),
+                new NameWrapper("Switch Box Shake-Up","Fld_Trance00_Msn"),
+                new NameWrapper("Spongy Observatory","Fld_Sponge01_Msn"),
+                new NameWrapper("Pinwheel Power Plant","Fld_Fusya00_Msn"),
+                new NameWrapper("Far-Flung Flooders","Fld_Dozer01_Msn"),
+                new NameWrapper("Octoling Onslaught","Fld_RvlSeaPlant00_Msn"),
+                new NameWrapper("Unavoidable Flying Object","Fld_OctSkatePark00_Msn"),
+                new NameWrapper("Boss 1","Fld_BossStampKing_Bos_Msn"),
+                new NameWrapper("Boss 2","Fld_BossCylinderKing_Bos_Msn"),
+                new NameWrapper("Boss 3","Fld_BossBallKing_Bos_Msn"),
+                new NameWrapper("Boss 4","Fld_BossMouthKing_Bos_Msn"),
+                new NameWrapper("Boss 5","Fld_BossRailKing_Bos_Msn"),
+            };
+            NameCBox.DataSource = maps;
+            NameCBox.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -112,7 +187,7 @@ for x in range(int(len(string) / 4)):
 
         private void PokeButton_Click(object sender, EventArgs e)
         {
-            PokeAllMaps(NameCBox.Text);
+            PokeAllMaps(((NameWrapper)NameCBox.SelectedItem).dataName);
             MessageBox.Show("Success!", "GeckoTool", MessageBoxButtons.OK);
         }
 
