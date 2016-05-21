@@ -64,6 +64,7 @@ namespace GeckoMapTester
                 new NameWrapper("Far-Flung Flooders","Fld_Dozer01_Msn"),
                 new NameWrapper("Octoling Onslaught","Fld_RvlSeaPlant00_Msn"),
                 new NameWrapper("Unavoidable Flying Object","Fld_OctSkatePark00_Msn"),
+                new NameWrapper("Staff Roll","Fld_StaffRoll00_Stf"),
                 new NameWrapper("Boss 1","Fld_BossStampKing_Bos_Msn"),
                 new NameWrapper("Boss 2","Fld_BossCylinderKing_Bos_Msn"),
                 new NameWrapper("Boss 3","Fld_BossBallKing_Bos_Msn"),
