@@ -12,8 +12,9 @@ namespace GeckoMapTester
         {
             InitializeComponent();
             NameWrapper[] maps = {
+                new NameWrapper("<no change>", "<no change>"),
                 new NameWrapper("Urchin Underpass","Fld_Crank00_Vss"),
-                new NameWrapper("Walleye Warehous","Fld_Warehouse00_Vss"),
+                new NameWrapper("Walleye Warehouse","Fld_Warehouse00_Vss"),
                 new NameWrapper("Saltspray Rig","Fld_SeaPlant00_Vss"),
                 new NameWrapper("Arowana Mall","Fld_UpDown00_Vss"),
                 new NameWrapper("Blackbelly Skatepark","Fld_SkatePark00_Vss"),
@@ -22,7 +23,7 @@ namespace GeckoMapTester
                 new NameWrapper("Kelp Dome","Fld_Maze00_Vss"),
                 new NameWrapper("Moray Towers","Fld_Tuzura00_Vss"),
                 new NameWrapper("Bluefin Depot","Fld_Ruins00_Vss"),
-                new NameWrapper("Trainingsroom","Fld_ShootingRange_Shr"),
+                new NameWrapper("Shooting Range","Fld_ShootingRange_Shr"),
                 new NameWrapper("Ancho-V Games","Fld_Office00_Vss"),
                 new NameWrapper("Piranha Pit","Fld_Quarry00_Vss"),
                 new NameWrapper("Flounder Heights","Fld_Jyoheki00_Vss"),
@@ -71,6 +72,29 @@ namespace GeckoMapTester
             };
             NameCBox.DataSource = maps;
             NameCBox.SelectedIndex = 0;
+
+            NameWrapper[] sceneenvsets = {
+                new NameWrapper("<no change>", "<no change>"),
+                new NameWrapper("Day 1","MisSkyDay01,Common"),
+                new NameWrapper("Twilight 1","MisSkyTwilight,Common"),
+                new NameWrapper("Day 2","MisSkyDay,Common"),
+                new NameWrapper("Green","MisSkyGreen,Common"),
+                new NameWrapper("Sunset","MisSkySunset,Common"),
+                new NameWrapper("Night","MisSkyNight,Common"),
+                new NameWrapper("Galaxy Monitors","MisSkyGalaxy,Common"),
+                new NameWrapper("Gray","MisSkyGray,Common"),
+                new NameWrapper("Twilight 2","MisTwilight,Common"),
+                new NameWrapper("Dozer","MisDozer,Common"),
+                new NameWrapper("Battle","MisBattle"),
+                new NameWrapper("Broken Monitors","MisMonitorBroken,Common"),
+                new NameWrapper("Boss 1","Stampking,Common"),
+                new NameWrapper("Boss 2","CylinderKing,Common"),
+                new NameWrapper("Boss 3","BallKing,Common"),
+                new NameWrapper("Boss 4","Mouthking,Common"),
+                new NameWrapper("Boss 5","RailKing,Common"),
+            };
+            seCBox.DataSource = sceneenvsets;
+            seCBox.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,78 +122,59 @@ namespace GeckoMapTester
             ConnectButton.Enabled = true;
         }
 
-        /* hacky, needs ironpython and messes up padding
-        private void writestr(uint address, string str)
-        {
-            ScriptEngine engine = Python.CreateEngine();
-            try {
-                ICollection<string> paths = engine.GetSearchPaths();
-
-
-                paths.Add(extrasite);
-                //paths.Add(Environment.CurrentDirectory);
-
-                engine.SetSearchPaths(paths);
-
-                var script = @"import struct
-if type(string) != bytes: string = bytes(string, ""UTF - 8"")
-if len(string) % 4: string += bytes((4 - (len(string) % 4)) * b""\x00"")
-pos = 0
-for x in range(int(len(string) / 4)):
-    me.PokeDummy(address, struct.unpack("">I"", string[pos:pos + 4])[0])
-    address += 4;
-    pos += 4";
-
-                ScriptScope scope = engine.CreateScope();
-
-                //Test class with a method that prints to the screen.
-                scope.SetVariable("me", this);
-                scope.SetVariable("string", str);
-                scope.SetVariable("address", address);
-
-                ScriptSource source = engine.CreateScriptSourceFromString(script, Microsoft.Scripting.SourceCodeKind.Statements);
-
-
-                source.Execute(scope);
-
-            }catch(Exception exc)
-            {
-                MessageBox.Show("IronPython Operation failed: \n\n" + engine.GetService<ExceptionOperations>().FormatException(exc) + "\n\nCheck your lib directory!", "Operation failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-        }
-        */
-
         private void PokeAllMaps(string NewMapName)
         {
-            writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE4A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE42C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE3B4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE33C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE2C4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE24C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE15C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE0E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEE06C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEDFF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEDF7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEDF04, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12AEDE8C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            if (NewMapName != "<no change>")
+            {
+                writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE4A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE42C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE3B4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE33C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE2C4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE24C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE15C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE0E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEE06C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEDFF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEDF7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEDF04, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12AEDE8C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
 
-            writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4C1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4C45C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4C6E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4C96C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4CBF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4CE7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-            writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4C1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4C45C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4C6E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4C96C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4CBF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4CE7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            }
+        }
+
+        public void PokeAllSceneEnvSetNames(string SetName)
+        {
+            if (SetName != "<no change>")
+            {
+                writeStringSimple(0x12B4D6F8, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4BB20, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4D470, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4D1E8, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4CF60, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4CCD8, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4CA50, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4C7C8, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4C540, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4C2B8, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4C030, SetName, "MisMonitorBroken,Common".Length);
+                writeStringSimple(0x12B4BDA8, SetName, "MisMonitorBroken,Common".Length);
+            }
         }
 
         private void PokeButton_Click(object sender, EventArgs e)
@@ -182,33 +187,19 @@ for x in range(int(len(string) / 4)):
             {
                 PokeAllMaps(NameCBox.Text);
             }
+
+            try
+            {
+                PokeAllSceneEnvSetNames(((NameWrapper)seCBox.SelectedItem).dataName);
+            }
+            catch (NullReferenceException)
+            {
+                PokeAllSceneEnvSetNames(seCBox.Text);
+            }
+
             MessageBox.Show("Success!", "GeckoTool", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
-        /* gah
-        public void PokeDummy(int add, int val)
-        {
-
-            //MessageBox.Show("add: " + add + "\nval: " + val, "", MessageBoxButtons.OK, MessageBoxIcon.Stop);        
-            try {
-                uint test1 = Convert.ToUInt32(add);
-                uint test2 = Convert.ToUInt32(val);
-
-                try
-                {
-                    Gecko.poke(test1, test2);
-                }
-                catch (Exception exc)
-                {
-                    MessageBox.Show("Writing values to RAM failed: \n\n" + exc.Message, "Poke failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                }
-            }
-            catch(Exception exc)
-            {
-                MessageBox.Show("Writing values to RAM failed: \n\n" + exc.Message, "Poke failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-        }
-        */
         private void writeString(string s, uint offset)
         {
             uint push = 0;
@@ -340,6 +331,11 @@ for x in range(int(len(string) / 4)):
                 }
                 Gecko.poke(offset, 0);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

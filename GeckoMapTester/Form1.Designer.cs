@@ -35,6 +35,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DisconnButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.seCBox = new System.Windows.Forms.ComboBox();
             this.PokeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -152,20 +154,61 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.seCBox);
             this.groupBox2.Controls.Add(this.PokeButton);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.NameCBox);
             this.groupBox2.Enabled = false;
             this.groupBox2.Location = new System.Drawing.Point(12, 67);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 76);
+            this.groupBox2.Size = new System.Drawing.Size(350, 128);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Map";
+            this.groupBox2.Text = "Settings";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "SceneEnvSet";
+            // 
+            // seCBox
+            // 
+            this.seCBox.FormattingEnabled = true;
+            this.seCBox.Items.AddRange(new object[] {
+            "<no change>",
+            "MisSkyDay01",
+            "MisSkyTwilight",
+            "MisSkyDay",
+            "MisSkyGreen",
+            "MisSkySunset",
+            "MisSkyNight",
+            "MisSkyGray",
+            "MisSkyNight",
+            "MisSkyGalaxy",
+            "MisTwilight",
+            "MisDozer",
+            "MisBattle",
+            "MisMonitorBroken",
+            "Mis",
+            "Stampking",
+            "CylinderKing",
+            "BallKing",
+            "Mouthking",
+            "RailKing"});
+            this.seCBox.Location = new System.Drawing.Point(6, 94);
+            this.seCBox.Name = "seCBox";
+            this.seCBox.Size = new System.Drawing.Size(257, 21);
+            this.seCBox.TabIndex = 12;
+            this.seCBox.Text = "<no change>";
             // 
             // PokeButton
             // 
-            this.PokeButton.Location = new System.Drawing.Point(269, 38);
+            this.PokeButton.Location = new System.Drawing.Point(267, 94);
             this.PokeButton.Name = "PokeButton";
             this.PokeButton.Size = new System.Drawing.Size(75, 23);
             this.PokeButton.TabIndex = 11;
@@ -187,7 +230,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(15, 146);
+            this.label2.Location = new System.Drawing.Point(15, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(345, 13);
             this.label2.TabIndex = 6;
@@ -197,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(374, 165);
+            this.ClientSize = new System.Drawing.Size(374, 220);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -207,6 +250,7 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "GeckoTool";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -227,6 +271,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button DisconnButton;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox seCBox;
     }
 }
 
