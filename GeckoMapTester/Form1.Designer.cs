@@ -35,6 +35,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DisconnButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.DojoCheckBox = new System.Windows.Forms.CheckBox();
+            this.OnlineCheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.seCBox = new System.Windows.Forms.ComboBox();
             this.PokeButton = new System.Windows.Forms.Button();
@@ -154,6 +156,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.DojoCheckBox);
+            this.groupBox2.Controls.Add(this.OnlineCheckBox);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.seCBox);
             this.groupBox2.Controls.Add(this.PokeButton);
@@ -166,6 +170,28 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Settings";
+            // 
+            // DojoCheckBox
+            // 
+            this.DojoCheckBox.AutoSize = true;
+            this.DojoCheckBox.Location = new System.Drawing.Point(193, 20);
+            this.DojoCheckBox.Name = "DojoCheckBox";
+            this.DojoCheckBox.Size = new System.Drawing.Size(78, 17);
+            this.DojoCheckBox.TabIndex = 15;
+            this.DojoCheckBox.Text = "Battle Dojo";
+            this.DojoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // OnlineCheckBox
+            // 
+            this.OnlineCheckBox.AutoSize = true;
+            this.OnlineCheckBox.Checked = true;
+            this.OnlineCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.OnlineCheckBox.Location = new System.Drawing.Point(132, 20);
+            this.OnlineCheckBox.Name = "OnlineCheckBox";
+            this.OnlineCheckBox.Size = new System.Drawing.Size(56, 17);
+            this.OnlineCheckBox.TabIndex = 14;
+            this.OnlineCheckBox.Text = "Online";
+            this.OnlineCheckBox.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -208,7 +234,7 @@
             // 
             // PokeButton
             // 
-            this.PokeButton.Location = new System.Drawing.Point(267, 94);
+            this.PokeButton.Location = new System.Drawing.Point(267, 93);
             this.PokeButton.Name = "PokeButton";
             this.PokeButton.Size = new System.Drawing.Size(75, 23);
             this.PokeButton.TabIndex = 11;
@@ -273,6 +299,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox seCBox;
+        private System.Windows.Forms.CheckBox DojoCheckBox;
+        private System.Windows.Forms.CheckBox OnlineCheckBox;
     }
 }
 

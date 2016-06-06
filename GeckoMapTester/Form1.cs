@@ -125,7 +125,7 @@ namespace GeckoMapTester
 
         private void PokeAllMaps(string NewMapName)
         {
-            if (NewMapName != "<no change>")
+            if (OnlineCheckBox.Checked && NewMapName != "<no change>")
             {
                 writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                 writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
@@ -156,6 +156,14 @@ namespace GeckoMapTester
                 writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                 writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                 writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+            }
+            if (DojoCheckBox.Checked && NewMapName != "<no change>")
+            {
+                writeStringSimple(0x12B533BC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
+                writeStringSimple(0x12B53644, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
+                writeStringSimple(0x12B538CC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
+                writeStringSimple(0x12B53B54, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
+                writeStringSimple(0x12B53DDC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
             }
         }
 
