@@ -149,93 +149,184 @@ namespace GeckoMapTester
 
         private void PokeAllMaps(string NewMapName)
         {
-            if (hasExtendedHandlerInstalled)
+            if (VerCBox.SelectedIndex == 0) // 2.8.0
             {
-                if (OnlineCheckBox.Checked && NewMapName != "<no change>")
+                if (hasExtendedHandlerInstalled)
                 {
-                    writeStringSimple(0x12AEE594 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE51C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE4A4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE42C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE3B4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE33C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE2C4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE24C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE15C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE0E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE06C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEDFF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEDF7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEDF04 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEDE8C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                    if (OnlineCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        writeStringSimple(0x12AEE594 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE51C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE4A4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE42C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE3B4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE33C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE2C4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE24C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE15C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE0E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE06C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDFF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDF7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDF04 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDE8C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
 
-                    writeStringSimple(0x12B4BA3C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4BCC4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4BF98 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4C1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4C45C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4C6E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4C96C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4CBF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4CE7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4D104 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4D38C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4D614 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BA3C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BCC4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BF98 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C45C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C6E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C96C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4CBF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4CE7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D104 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D38C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D614 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                    }
+                    if (DojoCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        writeStringSimple(0x12B54A84 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
+                        writeStringSimple(0x12B54D0C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
+                        writeStringSimple(0x12B54F94 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
+                        writeStringSimple(0x12B5521C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
+                        writeStringSimple(0x12B554A4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                    }
                 }
-                if (DojoCheckBox.Checked && NewMapName != "<no change>")
+                else
                 {
-                    writeStringSimple(0x12B533BC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
-                    writeStringSimple(0x12B53644 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
-                    writeStringSimple(0x12B538CC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
-                    writeStringSimple(0x12B53B54 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
-                    writeStringSimple(0x12B53DDC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                    if (OnlineCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE4A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE42C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE3B4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE33C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE2C4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE24C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE15C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE0E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE06C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDFF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDF7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDF04, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDE8C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+
+                        writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C45C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C6E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C96C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4CBF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4CE7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                    }
+                    if (DojoCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        writeStringSimple(0x12B54A84, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
+                        writeStringSimple(0x12B54D0C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
+                        writeStringSimple(0x12B54F94, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
+                        writeStringSimple(0x12B5521C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
+                        writeStringSimple(0x12B554A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                    }
                 }
             }
-            else
+            if (VerCBox.SelectedIndex == 1) // 2.7.0
             {
-                if (OnlineCheckBox.Checked && NewMapName != "<no change>")
+                if (hasExtendedHandlerInstalled)
                 {
-                    writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE4A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE42C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE3B4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE33C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE2C4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE24C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE15C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE0E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEE06C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEDFF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEDF7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEDF04, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12AEDE8C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                    if (OnlineCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        writeStringSimple(0x12AEE594 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE51C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE4A4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE42C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE3B4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE33C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE2C4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE24C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE15C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE0E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE06C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDFF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDF7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDF04 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDE8C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
 
-                    writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4C1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4C45C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4C6E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4C96C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4CBF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4CE7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                    writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BA3C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BCC4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BF98 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C45C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C6E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C96C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4CBF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4CE7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D104 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D38C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D614 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                    }
+                    if (DojoCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        writeStringSimple(0x12B533BC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
+                        writeStringSimple(0x12B53644 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
+                        writeStringSimple(0x12B538CC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
+                        writeStringSimple(0x12B53B54 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
+                        writeStringSimple(0x12B53DDC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                    }
                 }
-                if (DojoCheckBox.Checked && NewMapName != "<no change>")
+                else
                 {
-                    writeStringSimple(0x12B533BC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
-                    writeStringSimple(0x12B53644, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
-                    writeStringSimple(0x12B538CC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
-                    writeStringSimple(0x12B53B54, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
-                    writeStringSimple(0x12B53DDC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                    if (OnlineCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE4A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE42C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE3B4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE33C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE2C4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE24C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE15C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE0E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEE06C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDFF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDF7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDF04, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12AEDE8C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+
+                        writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C45C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C6E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4C96C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4CBF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4CE7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                    }
+                    if (DojoCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        writeStringSimple(0x12B533BC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
+                        writeStringSimple(0x12B53644, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
+                        writeStringSimple(0x12B538CC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
+                        writeStringSimple(0x12B53B54, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
+                        writeStringSimple(0x12B53DDC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                    }
                 }
             }
-            
         }
 
         public void PokeAllSceneEnvSetNames(string SetName)
