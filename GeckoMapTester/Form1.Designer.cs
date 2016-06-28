@@ -35,6 +35,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DisconnButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.VerCBox = new System.Windows.Forms.ComboBox();
             this.DojoCheckBox = new System.Windows.Forms.CheckBox();
             this.OnlineCheckBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -156,6 +157,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.VerCBox);
             this.groupBox2.Controls.Add(this.DojoCheckBox);
             this.groupBox2.Controls.Add(this.OnlineCheckBox);
             this.groupBox2.Controls.Add(this.label3);
@@ -171,10 +173,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Settings";
             // 
+            // VerCBox
+            // 
+            this.VerCBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VerCBox.FormattingEnabled = true;
+            this.VerCBox.Items.AddRange(new object[] {
+            "2.8.0",
+            "2.7.0"});
+            this.VerCBox.Location = new System.Drawing.Point(268, 66);
+            this.VerCBox.Name = "VerCBox";
+            this.VerCBox.Size = new System.Drawing.Size(73, 21);
+            this.VerCBox.TabIndex = 16;
+            this.VerCBox.SelectedIndex = 0;
+            // 
             // DojoCheckBox
             // 
             this.DojoCheckBox.AutoSize = true;
-            this.DojoCheckBox.Location = new System.Drawing.Point(193, 20);
+            this.DojoCheckBox.Location = new System.Drawing.Point(268, 45);
             this.DojoCheckBox.Name = "DojoCheckBox";
             this.DojoCheckBox.Size = new System.Drawing.Size(78, 17);
             this.DojoCheckBox.TabIndex = 15;
@@ -186,7 +201,7 @@
             this.OnlineCheckBox.AutoSize = true;
             this.OnlineCheckBox.Checked = true;
             this.OnlineCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.OnlineCheckBox.Location = new System.Drawing.Point(132, 20);
+            this.OnlineCheckBox.Location = new System.Drawing.Point(268, 22);
             this.OnlineCheckBox.Name = "OnlineCheckBox";
             this.OnlineCheckBox.Size = new System.Drawing.Size(56, 17);
             this.OnlineCheckBox.TabIndex = 14;
@@ -256,11 +271,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(15, 198);
+            this.label2.Location = new System.Drawing.Point(66, 198);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 13);
+            this.label2.Size = new System.Drawing.Size(233, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Only for Splatoon 2.7.0, thanks to NWPlayer and CFLean for helpful stuff";
+            this.label2.Text = "Thanks to NWPlayer and CFLean for helpful stuff";
             // 
             // Form1
             // 
@@ -301,6 +316,7 @@
         private System.Windows.Forms.ComboBox seCBox;
         private System.Windows.Forms.CheckBox DojoCheckBox;
         private System.Windows.Forms.CheckBox OnlineCheckBox;
+        private System.Windows.Forms.ComboBox VerCBox;
     }
 }
 
