@@ -136,7 +136,8 @@ namespace GeckoMapTester
             
             Gecko.poke(0x10613EC4, 0x756C6174);
             Gecko.poke(0x10613ED4, 0x68650000);
-
+            Gecko.poke(0x10613F10, 0x63650000);
+			
             groupBox2.Enabled = true;
             DisconnButton.Enabled = true;
             ConnectButton.Enabled = false;
