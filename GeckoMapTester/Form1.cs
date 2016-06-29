@@ -133,6 +133,9 @@ namespace GeckoMapTester
                 hasExtendedHandlerInstalled = true;
             }
             Gecko.poke(0x10014cfc, 0x00000000);
+            
+            Gecko.poke(0x10613EC4, 0x756C6174);
+            Gecko.poke(0x10613ED4, 0x68650000);
 
             groupBox2.Enabled = true;
             DisconnButton.Enabled = true;
