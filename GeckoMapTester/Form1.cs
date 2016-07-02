@@ -236,7 +236,7 @@ namespace GeckoMapTester
                         writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
 						
 						for(uint i=0; i<9; i++)
-					        writeStringSimple(0x12B4D89C + i * 0x288, "Fld_BossCylinderKing_Bos_Msn".Length);
+					        writeStringSimple(0x12B4D89C + i * 0x288, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
@@ -285,7 +285,7 @@ namespace GeckoMapTester
                         writeStringSimple(0x12B4D614 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
 						
 						for(uint i=0; i<9; i++)
-					        writeStringSimple(0x12B4D89C + i * 0x288 + diffforhandler, "Fld_BossCylinderKing_Bos_Msn".Length);
+					        writeStringSimple(0x12B4D89C + i * 0x288 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
@@ -331,7 +331,7 @@ namespace GeckoMapTester
                         writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
 						
 						for(uint i=0; i<9; i++)
-					        writeStringSimple(0x12B4D89C + i * 0x288, "Fld_BossCylinderKing_Bos_Msn".Length);
+					        writeStringSimple(0x12B4D89C + i * 0x288, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
