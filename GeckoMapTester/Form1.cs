@@ -273,35 +273,24 @@ namespace GeckoMapTester
         {
             if (SetName != "<no change>")
             {
+                uint baseAddress = 0x12B4BB20;
+                if (VerCBox.Text == "2.10.0" || VerCBox.Text == "2.9.0")
+                {
+                    baseAddress = 0x12B4D7C8;
+                }
                 if (hasExtendedHandlerInstalled)
                 {
-                    writeStringSimple(0x12B4D6F8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4BB20 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4D470 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4D1E8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CF60 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CCD8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CA50 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C7C8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C540 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C2B8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C030 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4BDA8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
+                    for(uint i=0; i < 16; i++)
+                    {
+                        writeStringSimple(baseAddress + diffforhandler + i * 0x0288, SetName, "MisMonitorBroken,Common".Length);
+                    }
                 }
                 else
                 {
-                    writeStringSimple(0x12B4D6F8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4BB20, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4D470, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4D1E8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CF60, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CCD8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CA50, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C7C8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C540, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C2B8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C030, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4BDA8, SetName, "MisMonitorBroken,Common".Length);
+                    for (uint i = 0; i < 16; i++)
+                    {
+                        writeStringSimple(baseAddress + i * 0x0288, SetName, "MisMonitorBroken,Common".Length);
+                    }
                 }
             }
         }
