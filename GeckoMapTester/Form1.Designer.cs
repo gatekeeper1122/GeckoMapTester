@@ -178,6 +178,8 @@
             this.VerCBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.VerCBox.FormattingEnabled = true;
             this.VerCBox.Items.AddRange(new object[] {
+            "2.10.0",
+            "2.9.0",
             "2.8.0",
             "2.7.0"});
             this.VerCBox.Location = new System.Drawing.Point(268, 66);

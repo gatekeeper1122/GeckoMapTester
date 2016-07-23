@@ -159,69 +159,36 @@ namespace GeckoMapTester
                 {
                     if (OnlineCheckBox.Checked && NewMapName != "<no change>")
                     {
-                        writeStringSimple(0x12AEE594 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE51C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE4A4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE42C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE3B4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE33C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE2C4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE24C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE15C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE0E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE06C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDFF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDF7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDF04 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDE8C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        // Main maps
+                        pokeThem(0x12AEDE8C + diffforhandler, NewMapName, 16);
 
-                        writeStringSimple(0x12B4BA3C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4BCC4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4BF98 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C45C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C6E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C96C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4CBF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4CE7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D104 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D38C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D614 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-						
-						for(uint i=0; i<9; i++)
-					        writeStringSimple(0x12B4D89C + i * 0x288  + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        // other maps
+                        pokeThem(0x12B4BA3C + diffforhandler, NewMapName, 12);
+
+                        // redundant maps
+                        pokeThem(0x12B4D89C + diffforhandler, NewMapName, 9);
+
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
-                        writeStringSimple(0x12B533BC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
-                        writeStringSimple(0x12B53644 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
-                        writeStringSimple(0x12B538CC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
-                        writeStringSimple(0x12B53B54 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
-                        writeStringSimple(0x12B53DDC + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                        // Dojo
+                        pokeThem(0x12B533BC + diffforhandler, NewMapName, 5);
                     }
                 }
                 else
                 {
                     if (OnlineCheckBox.Checked && NewMapName != "<no change>")
                     {
-                        writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE4A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE42C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE3B4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE33C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE2C4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE24C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE15C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE0E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE06C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDFF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDF7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDF04, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDE8C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        // Main maps
+                        pokeThem(0x12AEDE8C, NewMapName, 16);
 
+                        // other maps
+                        pokeThem(0x12B4BA3C, NewMapName, 12);
+
+<<<<<<< HEAD
+                        // redundant maps
+                        pokeThem(0x12B4D89C, NewMapName, 9);
+=======
                         writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                         writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                         writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
@@ -237,14 +204,12 @@ namespace GeckoMapTester
 						
 						for(uint i=0; i<9; i++)
 					        writeStringSimple(0x12B4D89C + i * 0x288, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+>>>>>>> refs/remotes/origin/master
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
-                        writeStringSimple(0x12B533BC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
-                        writeStringSimple(0x12B53644, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
-                        writeStringSimple(0x12B538CC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
-                        writeStringSimple(0x12B53B54, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
-                        writeStringSimple(0x12B53DDC, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                        // Dojo
+                        pokeThem(0x12B533BC, NewMapName, 5);
                     }
                 }
             }
@@ -254,23 +219,52 @@ namespace GeckoMapTester
                 {
                     if (OnlineCheckBox.Checked && NewMapName != "<no change>")
                     {
-                        writeStringSimple(0x12AEE594 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE51C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE4A4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE42C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE3B4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE33C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE2C4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE24C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE15C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE0E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE06C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDFF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDF7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDF04 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDE8C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        // Main maps
+                        pokeThem(0x12AEDE8C + diffforhandler, NewMapName, 16);
 
+                        // other maps
+                        pokeThem(0x12B4BA3C + diffforhandler, NewMapName, 12);
+
+                        // redundant maps
+                        pokeThem(0x12B4D89C + diffforhandler, NewMapName, 9);
+                    }
+                    if (DojoCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        // Dojo
+                        pokeThem(0x12B533BC + diffforhandler, NewMapName, 5);
+                    }
+                }
+                else
+                {
+                    if (OnlineCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        // Main maps
+                        pokeThem(0x12AEDE8C, NewMapName, 16);
+
+                        // other maps
+                        pokeThem(0x12B4BA3C, NewMapName, 12);
+
+                        // redundant maps
+                        pokeThem(0x12B4D89C, NewMapName, 9);
+                    }
+                    if (DojoCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        // Dojo
+                        pokeThem(0x12B533BC, NewMapName, 5);
+                    }
+                }
+            }
+
+<<<<<<< HEAD
+            if (VerCBox.Text == "2.10.0" || VerCBox.Text == "2.9.0")
+            {
+                if (hasExtendedHandlerInstalled)
+                {
+                    if (OnlineCheckBox.Checked && NewMapName != "<no change>")
+                    {
+                        // Main maps
+                        pokeThem(0x12B4D6E4 + diffforhandler, NewMapName, 16);
+=======
                         writeStringSimple(0x12B4BA3C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                         writeStringSimple(0x12B4BCC4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                         writeStringSimple(0x12B4BF98 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
@@ -286,37 +280,23 @@ namespace GeckoMapTester
 						
 						for(uint i=0; i<9; i++)
 					        writeStringSimple(0x12B4D89C + i * 0x288 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+>>>>>>> refs/remotes/origin/master
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
-                        writeStringSimple(0x12B54A84 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
-                        writeStringSimple(0x12B54D0C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
-                        writeStringSimple(0x12B54F94 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
-                        writeStringSimple(0x12B5521C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
-                        writeStringSimple(0x12B554A4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                        // Dojo
+                        pokeThem(0x12B55A84 + diffforhandler, NewMapName, 5);
                     }
                 }
                 else
                 {
                     if (OnlineCheckBox.Checked && NewMapName != "<no change>")
                     {
-                        writeStringSimple(0x12AEE594, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE51C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE4A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE42C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE3B4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE33C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE2C4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE24C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE15C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE0E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEE06C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDFF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDF7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDF04, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12AEDE8C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+                        // Main maps
+                        pokeThem(0x12B4D6E4, NewMapName, 16);
 
+<<<<<<< HEAD
+=======
                         writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                         writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
                         writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
@@ -332,14 +312,12 @@ namespace GeckoMapTester
 						
 						for(uint i=0; i<9; i++)
 					        writeStringSimple(0x12B4D89C + i * 0x288, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
+>>>>>>> refs/remotes/origin/master
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
-                        writeStringSimple(0x12B54A84, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Crank00_Dul (Urchin Underpass)
-                        writeStringSimple(0x12B54D0C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SkatePark00_Dul (Blackbelly Skatepark)
-                        writeStringSimple(0x12B54F94, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_Warehouse00_Dul (Walleye Warehouse)
-                        writeStringSimple(0x12B5521C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_SeaPlant00_Dul (Saltspray Rig)
-                        writeStringSimple(0x12B554A4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length); // Fld_UpDown00_Dul (Arowana Mall)
+                        // Dojo
+                        pokeThem(0x12B55A84, NewMapName, 5);    
                     }
                 }
             }
@@ -349,37 +327,32 @@ namespace GeckoMapTester
         {
             if (SetName != "<no change>")
             {
+                uint baseAddress = 0x12B4BB20;
+                if (VerCBox.Text == "2.10.0" || VerCBox.Text == "2.9.0")
+                {
+                    baseAddress = 0x12B4D7C8;
+                }
                 if (hasExtendedHandlerInstalled)
                 {
-                    writeStringSimple(0x12B4D6F8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4BB20 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4D470 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4D1E8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CF60 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CCD8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CA50 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C7C8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C540 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C2B8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C030 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4BDA8 + diffforhandler, SetName, "MisMonitorBroken,Common".Length);
+                    for(uint i=0; i < 16; i++)
+                    {
+                        writeStringSimple(baseAddress + diffforhandler + i * 0x0288, SetName, "MisMonitorBroken,Common".Length);
+                    }
                 }
                 else
                 {
-                    writeStringSimple(0x12B4D6F8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4BB20, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4D470, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4D1E8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CF60, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CCD8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4CA50, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C7C8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C540, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C2B8, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4C030, SetName, "MisMonitorBroken,Common".Length);
-                    writeStringSimple(0x12B4BDA8, SetName, "MisMonitorBroken,Common".Length);
+                    for (uint i = 0; i < 16; i++)
+                    {
+                        writeStringSimple(baseAddress + i * 0x0288, SetName, "MisMonitorBroken,Common".Length);
+                    }
                 }
             }
+        }
+
+        private void pokeThem(uint startOffset, string NewMapName, int num)
+        {
+            for (uint i = 0; i < num; i++)
+                writeStringSimple(startOffset + i * 0x288, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
         }
 
         private void PokeButton_Click(object sender, EventArgs e)
