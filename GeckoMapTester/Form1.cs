@@ -133,11 +133,12 @@ namespace GeckoMapTester
                 hasExtendedHandlerInstalled = true;
             }
             Gecko.poke(0x10014cfc, 0x00000000);
-            
-            Gecko.poke(0x10613EC4, 0x756C6174);
-            Gecko.poke(0x10613ED4, 0x68650000);
-            Gecko.poke(0x10613F10, 0x63650000);
-			
+
+            Gecko.poke(0x10613C2C, 0x5F476573);
+            Gecko.poke(0x10613C3C, 0x756C6174);
+            Gecko.poke(0x10613C4C, 0x68650000);
+            Gecko.poke(0x10613C88, 0x63650000);
+
             groupBox2.Enabled = true;
             DisconnButton.Enabled = true;
             ConnectButton.Enabled = false;
@@ -185,26 +186,8 @@ namespace GeckoMapTester
                         // other maps
                         pokeThem(0x12B4BA3C, NewMapName, 12);
 
-<<<<<<< HEAD
                         // redundant maps
                         pokeThem(0x12B4D89C, NewMapName, 9);
-=======
-                        writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C45C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C6E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C96C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4CBF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4CE7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-						
-						for(uint i=0; i<9; i++)
-					        writeStringSimple(0x12B4D89C + i * 0x288, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
->>>>>>> refs/remotes/origin/master
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
@@ -255,7 +238,6 @@ namespace GeckoMapTester
                 }
             }
 
-<<<<<<< HEAD
             if (VerCBox.Text == "2.10.0" || VerCBox.Text == "2.9.0")
             {
                 if (hasExtendedHandlerInstalled)
@@ -264,23 +246,6 @@ namespace GeckoMapTester
                     {
                         // Main maps
                         pokeThem(0x12B4D6E4 + diffforhandler, NewMapName, 16);
-=======
-                        writeStringSimple(0x12B4BA3C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4BCC4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4BF98 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C1D4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C45C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C6E4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C96C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4CBF4 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4CE7C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D104 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D38C + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D614 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-						
-						for(uint i=0; i<9; i++)
-					        writeStringSimple(0x12B4D89C + i * 0x288 + diffforhandler, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
->>>>>>> refs/remotes/origin/master
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
@@ -295,29 +260,11 @@ namespace GeckoMapTester
                         // Main maps
                         pokeThem(0x12B4D6E4, NewMapName, 16);
 
-<<<<<<< HEAD
-=======
-                        writeStringSimple(0x12B4BA3C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4BCC4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4BF98, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C1D4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C45C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C6E4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4C96C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4CBF4, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4CE7C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D104, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D38C, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-                        writeStringSimple(0x12B4D614, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
-						
-						for(uint i=0; i<9; i++)
-					        writeStringSimple(0x12B4D89C + i * 0x288, NewMapName, "Fld_BossCylinderKing_Bos_Msn".Length);
->>>>>>> refs/remotes/origin/master
                     }
                     if (DojoCheckBox.Checked && NewMapName != "<no change>")
                     {
                         // Dojo
-                        pokeThem(0x12B55A84, NewMapName, 5);    
+                        pokeThem(0x12B55A84, NewMapName, 5);
                     }
                 }
             }
@@ -334,7 +281,7 @@ namespace GeckoMapTester
                 }
                 if (hasExtendedHandlerInstalled)
                 {
-                    for(uint i=0; i < 16; i++)
+                    for (uint i = 0; i < 16; i++)
                     {
                         writeStringSimple(baseAddress + diffforhandler + i * 0x0288, SetName, "MisMonitorBroken,Common".Length);
                     }
@@ -361,7 +308,7 @@ namespace GeckoMapTester
             {
                 PokeAllMaps(((NameWrapper)NameCBox.SelectedItem).dataName);
             }
-            catch(NullReferenceException)
+            catch (NullReferenceException)
             {
                 PokeAllMaps(NameCBox.Text);
             }
