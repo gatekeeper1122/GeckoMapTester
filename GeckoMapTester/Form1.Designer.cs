@@ -186,7 +186,6 @@
             this.VerCBox.Name = "VerCBox";
             this.VerCBox.Size = new System.Drawing.Size(73, 21);
             this.VerCBox.TabIndex = 16;
-            this.VerCBox.SelectedIndex = 0;
             // 
             // DojoCheckBox
             // 
@@ -293,7 +292,6 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "GeckoTool";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
